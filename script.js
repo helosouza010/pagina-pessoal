@@ -65,7 +65,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observar elementos para animação
-document.querySelectorAll('.about-text, .skill-card, .timeline-content, .contact-card').forEach(el => {
+document.querySelectorAll('.about-text, .skill-card, .timeline-content, .contact-card, .project-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
