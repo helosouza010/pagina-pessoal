@@ -1,34 +1,51 @@
-// Navegação Mobile
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+const body = document.body;
+const themeToggle = document.getElementById('themeToggle');
+const menuToggle = document.getElementById('menuToggle');
+const sideLinks = document.querySelectorAll('.side-nav a');
 
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
+function applyTheme(theme) {
+    if (theme === 'light') {
+        body.classList.add('theme-light');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i><span>Modo Claro</span>';
+    } else {
+        body.classList.remove('theme-light');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i><span>Modo Escuro</span>';
+    }
+}
 
-    // Fechar menu ao clicar em um link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-        });
+const savedTheme = localStorage.getItem('theme') || 'dark';
+applyTheme(savedTheme);
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const nextTheme = body.classList.contains('theme-light') ? 'dark' : 'light';
+        localStorage.setItem('theme', nextTheme);
+        applyTheme(nextTheme);
     });
 }
 
-// Ativar link da navegação conforme scroll
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        const isClosed = body.classList.toggle('menu-closed');
+        menuToggle.innerHTML = isClosed
+            ? '<i class="fas fa-bars"></i><span>Abrir menu</span>'
+            : '<i class="fas fa-times"></i><span>Fechar menu</span>';
+    });
+}
+
 window.addEventListener('scroll', () => {
     let current = '';
-    
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section[id]');
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 200) {
+        const sectionHeight = section.offsetHeight;
+        if (window.pageYOffset >= sectionTop - 160) {
             current = section.getAttribute('id');
         }
     });
 
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    sideLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href').slice(1) === current) {
             link.classList.add('active');
@@ -36,20 +53,15 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Formulário de contato
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
-        // Aqui você pode adicionar lógica para enviar o email
-        // Por enquanto, vamos apenas mostrar uma mensagem
         alert('Obrigada pela sua mensagem! Responderei em breve.');
         contactForm.reset();
     });
 }
 
-// Animação suave dos elementos ao fazer scroll
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
@@ -64,7 +76,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observar elementos para animação
 document.querySelectorAll('.about-text, .skill-card, .timeline-content, .contact-card, .project-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
@@ -72,14 +83,13 @@ document.querySelectorAll('.about-text, .skill-card, .timeline-content, .contact
     observer.observe(el);
 });
 
-// Efeito parallax suave (opcional)
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero-image');
-    
+
     if (hero) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        hero.style.transform = `translateY(${scrolled * 0.4}px)`;
     }
 });
 
-console.log('Página de Heloisa carregada com sucesso! 💜');
+console.log('Página de Heloisa carregada com sucesso!');

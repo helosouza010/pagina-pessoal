@@ -8,24 +8,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navegação -->
-    <nav class="navbar">
-        <div class="container">
+    <!-- Menu lateral -->
+    <aside class="side-menu">
+        <div class="brand">
             <div class="logo">H</div>
-            <ul class="nav-links">
-                <li><a href="#home" class="active">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="brand-text">
+                <p>Heloisa</p>
+                <span>Analista de Sistemas</span>
             </div>
         </div>
-    </nav>
+
+        <nav class="side-nav">
+            <a href="#sobre" class="active">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#skills">Skills</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <button id="themeToggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+            <span>Modo Escuro</span>
+        </button>
+    </aside>
+
+    <div class="page-content">
+        <button id="menuToggle" class="menu-toggle page-menu-button" aria-label="Abrir ou fechar menu">
+            <i class="fas fa-bars"></i>
+            <span>Menu</span>
+        </button>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -80,59 +90,55 @@
         </div>
     </section>
 
-    <!-- Formação -->
-    <section id="formacao" class="education">
+    <!-- Skills -->
+    <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Formação Acadêmica</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Análise e Desenvolvimento de Sistemas</h3>
-                        <p class="timeline-institution">Formação Profissional Completa</p>
-                        <p class="timeline-description">Adquiri conhecimentos sólidos em programação, arquitetura de software, análise de sistemas, banco de dados e práticas ágeis de desenvolvimento. Uma formação que me capacita a criar soluções tecnológicas completas e de qualidade.</p>
-                    </div>
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>HTML, CSS, JavaScript e criação de interfaces claras e funcionais.</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Inglês Básico</h3>
-                        <p class="timeline-institution">Desenvolvimento Contínuo</p>
-                        <p class="timeline-description">Estudando e praticando inglês para facilitar a comunicação em projetos internacionais e acompanhar a documentação e recursos técnicos em inglês.</p>
-                    </div>
+                <div class="skill-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Análise de Sistemas</h3>
+                    <p>Mapeamento de processos, levantamento de requisitos e melhoria contínua.</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Interesse em Tecnologia</h3>
-                        <p class="timeline-institution">Aprendizado Permanente</p>
-                        <p class="timeline-description">Dedicada a explorar novas tecnologias, metodologias e tendências do mercado. O aprendizado contínuo é fundamental para meu desenvolvimento profissional.</p>
-                    </div>
+                <div class="skill-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Resolução Estrutural</h3>
+                    <p>Abordagem séria, objetiva e confiável para desafios técnicos.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Comunicação Profissional</h3>
+                    <p>Conversa clara, alinhada e com foco em resultados sólidos.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projetos -->
-    <section id="projetos" class="projects">
+    <!-- Serviços -->
+    <section id="servicos" class="projects">
         <div class="container">
-            <h2 class="section-title">Projetos</h2>
-            <p class="projects-subtitle">Alguns trabalhos de páginas que criei para demonstrar habilidades em design, estrutura e usabilidade.</p>
+            <h2 class="section-title">Serviços</h2>
+            <p class="projects-subtitle">Ofereço entregas de alto padrão com foco em usabilidade, qualidade e profissionalismo.</p>
             <div class="projects-grid">
-                <a href="#" class="project-card">
+                <a href="#contato" class="project-card">
                     <div class="project-badge">01</div>
-                    <h3>Página de Portfólio</h3>
-                    <p>Layout elegante com seções de projetos e contato, ideal para apresentar seu trabalho.</p>
+                    <h3>Análise de Requisitos</h3>
+                    <p>Diagnóstico preciso de processos, metas e soluções de TI.</p>
                 </a>
-                <a href="#" class="project-card">
+                <a href="#contato" class="project-card">
                     <div class="project-badge">02</div>
-                    <h3>Landing Page Promocional</h3>
-                    <p>Focado em conversão, com chamadas para ação e design responsivo.</p>
+                    <h3>Desenvolvimento de Sistemas</h3>
+                    <p>Implementação de páginas e aplicações com foco em desempenho e estética.</p>
                 </a>
-                <a href="#" class="project-card">
+                <a href="#contato" class="project-card">
                     <div class="project-badge">03</div>
-                    <h3>Blog Pessoal</h3>
-                    <p>Estilo clean com tipografia refinada e navegação intuitiva para leitura.</p>
+                    <h3>Consultoria Técnica</h3>
+                    <p>Recomendações estratégicas, orientadas para resultados práticos.</p>
                 </a>
             </div>
         </div>
@@ -145,25 +151,20 @@
             <p class="contact-subtitle">Estou sempre aberta a novas oportunidades e colaborações. Entre em contato!</p>
             
             <div class="contact-methods">
-                <a href="mailto:heloisa@email.com" class="contact-card">
+                <a href="mailto:heloisasoaresdesouza010@gmail.com" class="contact-card">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
-                    <p>heloisa@email.com</p>
+                    <p>heloisasoaresdesouza010@gmail.com</p>
                 </a>
-                <a href="https://wa.me/5521999999999?text=Ol%C3%A1%20Heloisa%2C%20gostaria%20de%20conversar%20sobre%20um%20projeto" class="contact-card" target="_blank">
+                <a href="https://wa.me/5543998699493?text=Ol%C3%A1%20Heloisa%2C%20gostaria%20de%20conversar%20sobre%20um%20projeto" class="contact-card" target="_blank" rel="noopener">
                     <i class="fab fa-whatsapp"></i>
                     <h3>WhatsApp</h3>
-                    <p>Vamos conversar por mensagem</p>
+                    <p>+55 43 99869-9493</p>
                 </a>
-                <a href="https://linkedin.com" class="contact-card" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                    <h3>LinkedIn</h3>
-                    <p>Conecte comigo</p>
-                </a>
-                <a href="https://github.com" class="contact-card" target="_blank">
+                <a href="https://github.com/helosouza010" class="contact-card" target="_blank" rel="noopener">
                     <i class="fab fa-github"></i>
                     <h3>GitHub</h3>
-                    <p>Veja meus projetos</p>
+                    <p>github.com/helosouza010</p>
                 </a>
             </div>
 
@@ -187,18 +188,17 @@
         <div class="container">
             <p>&copy; 2026 Heloisa. Todos os direitos reservados.</p>
             <div class="social-links">
-                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/helosouza010" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/5521999999999?text=Olá%20Heloisa%2C%20gostaria%20de%20conversar%20sobre%20um%20projeto" class="whatsapp-float" target="_blank" rel="noopener">
+    <a href="https://wa.me/5543998699493?text=Ol%C3%A1%20Heloisa%2C%20gostaria%20de%20conversar%20sobre%20um%20projeto" class="whatsapp-float" target="_blank" rel="noopener">
         <i class="fab fa-whatsapp"></i>
         <span>WhatsApp</span>
     </a>
 
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
