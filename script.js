@@ -28,8 +28,8 @@ if (menuToggle) {
     menuToggle.addEventListener('click', () => {
         const isClosed = body.classList.toggle('menu-closed');
         menuToggle.innerHTML = isClosed
-            ? '<i class="fas fa-bars"></i><span>Abrir menu</span>'
-            : '<i class="fas fa-times"></i><span>Fechar menu</span>';
+            ? '<i class="fas fa-bars"></i><span></span>'
+            : '<i class="fas fa-times"></i><span></span>';
     });
 }
 

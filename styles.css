@@ -126,6 +126,7 @@ h1, h2, h3 {
     border-right: 1px solid rgba(255, 255, 255, 0.07);
     box-shadow: 10px 0 40px rgba(0, 0, 0, 0.35);
     z-index: 1000;
+    -webkit-backdrop-filter: blur(18px);
     backdrop-filter: blur(18px);
     transition: transform var(--transition), opacity var(--transition);
 }
@@ -158,6 +159,7 @@ h1, h2, h3 {
     gap: 0.75rem;
     color: var(--text-color);
     cursor: pointer;
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     transition: var(--transition);
 }
@@ -312,6 +314,7 @@ h1, h2, h3 {
 .contact {
     padding: 80px 0;
     background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -490,6 +493,7 @@ h1, h2, h3 {
 .about {
     padding: 80px 0;
     background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -551,6 +555,7 @@ h1, h2, h3 {
     transition: var(--transition);
     border-left: 4px solid rgba(212, 179, 143, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
 }
 
@@ -585,6 +590,7 @@ h1, h2, h3 {
     text-decoration: none;
     color: rgba(233, 228, 220, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
     transition: var(--transition);
     position: relative;
@@ -647,6 +653,7 @@ h1, h2, h3 {
 .education {
     padding: 80px 0;
     background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -721,6 +728,7 @@ h1, h2, h3 {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
     transition: var(--transition);
     border: 1px solid rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
 }
 
@@ -752,6 +760,7 @@ h1, h2, h3 {
 .contact {
     padding: 80px 0;
     background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -780,6 +789,7 @@ h1, h2, h3 {
     color: inherit;
     transition: var(--transition);
     border: 2px solid rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
 }
 
@@ -812,6 +822,7 @@ h1, h2, h3 {
     border-radius: var(--border-radius);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
     border: 1px solid rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
 }
 
@@ -925,6 +936,7 @@ h1, h2, h3 {
         text-align: center;
         transition: var(--transition);
         padding: 2rem 0;
+        -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
     }
 
