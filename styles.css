@@ -89,6 +89,41 @@ body.theme-light .project-badge {
     background: rgba(245, 197, 160, 0.18);
 }
 
+
+
+
+/* --- Ajustes específicos para a Hero no Modo Claro --- */
+body.theme-light .hero {
+    /* Troca o fundo escuro pelo fundo claro das variáveis */
+    background: radial-gradient(circle at 15% 20%, rgba(159, 85, 96, 0.05), transparent 40%),
+                linear-gradient(145deg, var(--bg) 0%, var(--bg-alt) 100%);
+}
+
+body.theme-light .hero-title {
+    color: var(--text-color);
+    text-shadow: none; /* Remove a sombra pesada que só faz sentido no escuro */
+}
+
+body.theme-light .hero-description {
+    color: var(--muted-color);
+}
+
+body.theme-light .circle-decoration {
+    /* Deixa o círculo com tons de pêssego e bordas suaves para combinar com o novo fundo */
+    background: radial-gradient(circle at 30% 30%, var(--peach), var(--accent-color), transparent 75%);
+    border: 2px solid rgba(165, 80, 96, 0.1);
+    box-shadow: 0 20px 60px rgba(118, 89, 66, 0.15), 0 0 40px rgba(240, 193, 160, 0.2);
+}
+
+body.theme-light .btn-secondary {
+    background: rgba(118, 89, 66, 0.05);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+
+
+
 body::before {
     content: '';
     position: fixed;
