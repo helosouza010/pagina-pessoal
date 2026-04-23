@@ -33,6 +33,16 @@ if (menuToggle) {
     });
 }
 
+// Fecha o menu quando clica em um link em mobile/tablet
+sideLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 1024) {
+            body.classList.add('menu-closed');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i><span></span>';
+        }
+    });
+});
+
 window.addEventListener('scroll', () => {
     let current = '';
     const sections = document.querySelectorAll('section[id]');
